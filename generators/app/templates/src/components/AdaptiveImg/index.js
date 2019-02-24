@@ -17,7 +17,7 @@ export default class AdaptiveImg extends Component {
   };
 
   render() {
-    const { src, data, alt, className, ...attrs } = this.props,
+    const { src, data, className, alt, ...attrs } = this.props,
       hasImgSet = !!data.localFile && !!data.localFile.childImageSharp,
       ImgElement = hasImgSet ? Img : 'img';
 
@@ -27,8 +27,8 @@ export default class AdaptiveImg extends Component {
           ? { fluid: data.localFile.childImageSharp.fluid }
           : { src: src || data.url })}
         styleName="img"
-        alt={alt}
         className={className || ''}
+        alt={alt || data.alt || ''}
         {...attrs}
       />
     );
