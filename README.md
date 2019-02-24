@@ -14,7 +14,7 @@ Generator boilerplate for progressive Gatsby projects by Tomorrow. Includes:
 ```sh
 npm i -g @tomorrow/generator-gatsby
 
-yo gatsby
+yo @tomorrow/gatsby
 ```
 
 ## License
