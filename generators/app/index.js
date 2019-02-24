@@ -22,6 +22,12 @@ module.exports = class extends Generator {
       },
       {
         type: 'input',
+        name: 'brandColor',
+        message: 'Brand color',
+        default: '#111'
+      },
+      {
+        type: 'input',
         name: 'prismicRepo',
         message: 'Prismic repository'
       },

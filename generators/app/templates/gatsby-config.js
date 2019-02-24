@@ -24,7 +24,7 @@ const PLUGIN_OPTS = {
     name: '<%= props.name %>',
     short_name: '<%= props.name %>',
     background_color: '#fff',
-    theme_color: '#111',
+    theme_color: '<%= props.brandColor %>',
     icon: './src/assets/img/icon.png',
     display: 'minimal-ui',
     include_favicon: false
@@ -36,7 +36,7 @@ const PLUGIN_OPTS = {
     icon: false
   },
   nprogress: {
-    color: '#111',
+    color: '<%= props.brandColor %>',
     showSpinner: false
   }
 };
