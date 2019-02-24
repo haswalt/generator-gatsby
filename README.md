@@ -12,7 +12,7 @@ Generator boilerplate for progressive Gatsby projects by Tomorrow. Includes:
 ## Usage
 
 ```sh
-npm i -g git+https://github.com/builtbytomorrow/generator-gatsby.git
+npm i -g @tomorrow/generator-gatsby
 
 yo gatsby
 ```
