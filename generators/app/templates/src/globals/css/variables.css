@@ -1,6 +1,13 @@
 /**
- * Custom variables
- * On top of Bloom.css
+ * Design system
+ * Using Bloom as a foundation
+ * https://github.com/builtbytomorrow/bloom
  */
 :root {
+  /* Bloom overrides */
+  --font-family-body: ;
+  --font-family-heading: ;
+  --font-family-ui: ;
+
+  /* Project variables */
 }
