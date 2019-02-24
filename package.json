@@ -1,6 +1,6 @@
 {
   "name": "@tomorrow/generator-gatsby",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate Gatsby-based projects for Tomorrow",
   "author": {
     "name": "Tomorrow",
