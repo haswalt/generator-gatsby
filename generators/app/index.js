@@ -39,8 +39,23 @@ module.exports = class extends Generator {
       this.destinationRoot(),
       { props: this.answers },
       {},
-      { globOptions: { dot: true } }
+      {
+        globOptions: {
+          dot: true,
+          // Ignore NPM special files
+          ignore: ['gitignore', 'env']
+        }
+      }
     );
+
+    // Explicitly copy NPM special files
+    this.fs.copy(
+      this.templatePath('gitignore'),
+      this.destinationPath('.gitignore')
+    );
+    this.fs.copyTpl(this.templatePath('env'), this.destinationPath('.env'), {
+      props: this.answers
+    });
   }
 
   install() {
