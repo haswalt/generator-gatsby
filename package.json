@@ -11,9 +11,14 @@
     "generators"
   ],
   "main": "generators/app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/builtbytomorrow/generator-gatsby.git"
+  },
   "keywords": [
     "yeoman-generator",
-    "gatsby"
+    "gatsby",
+    "boilerplate"
   ],
   "dependencies": {
     "yeoman-generator": "^2.0.1",
