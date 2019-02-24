@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
+import { randomId } from '../';
 import '../styles.module.css';
-
-function randomId() {
-  return Math.random()
-    .toString(36)
-    .substring(7);
-}
 
 /**
  * Input component

@@ -38,9 +38,9 @@ export default class Textarea extends Component {
           {label}
         </label>
         <textarea
-          styleName="input input--textarea"
+          styleName="textarea"
           id={syncedId}
-          rows="1"
+          rows="5"
           required={required}
           ref={initTextarea}
           {...attrs}
