@@ -1,14 +1,12 @@
 {
-  "name": "generator-gatsby",
+  "name": "@tomorrow/generator-gatsby",
   "version": "0.0.0",
-  "description": "Generate Gatsby-based projects for Little Planet",
+  "description": "Generate Gatsby-based projects for Tomorrow",
   "author": {
-    "name": "Tomorrow Labs",
-    "email": "sean@builtbytomorrow.com",
+    "name": "Tomorrow",
     "url": "https://www.builtbytomorrow.com"
   },
-  "license": "UNLICENSED",
-  "private": true,
+  "license": "MIT",
   "files": [
     "generators"
   ],
