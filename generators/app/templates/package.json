@@ -2,11 +2,7 @@
   "name": "<%= props.name %>",
   "description": "<%= props.description %>",
   "version": "0.0.0",
-  "author": {
-    "name": "Tomorrow Labs",
-    "email": "sean@builtbytomorrow.com",
-    "url": "https://www.builtbytomorrow.com"
-  },
+  "author": "Tomorrow (https://www.builtbytomorrow.com)",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
@@ -14,7 +10,7 @@
     "develop:storybook": "start-storybook -p 3002",
     "build": "gatsby build",
     "build:storybook": "build-storybook -o ./public/__components",
-    "generate": "npx plop --plopfile ./generators/plopfile.js",
+    "generate": "plop --plopfile ./generators/plopfile.js",
     "clean": "gatsby clean"
   },
   "dependencies": {
