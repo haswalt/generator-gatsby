@@ -43,7 +43,7 @@
     "postcss-nesting": "^7.0.0",
     "postcss-preset-env": "^6.0.10",
     "postcss-responsive-type": "^1.0.0",
-    "postcss-subgrid": "^0.1.4",
+    "postcss-subgrid": "^0.2.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0"
