@@ -38,6 +38,9 @@ module.exports = (baseConfig, env, config) => {
     });
   };
 
+  // Use Gatsby's ES6 entrypoint
+  config.resolve.mainFields = ['browser', 'module', 'main'];
+
   findRule('js').exclude = /node_modules\/(?!(gatsby)\/)/;
 
   findRule('css').use.push('postcss-loader');
