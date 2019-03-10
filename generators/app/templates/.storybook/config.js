@@ -1,5 +1,4 @@
-import { withOptions } from '@storybook/addon-options';
-import { addDecorator, configure } from '@storybook/react';
+import { addParameters, configure } from '@storybook/react';
 import '@tomorrow/bloom/bloom.css';
 import '../src/globals/css/variables.css';
 import '../src/globals/css/global.css';
@@ -22,12 +21,17 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
-addDecorator(
-  withOptions({
-    name: '<%= props.name %>',
-    url: '<%= props.url %>',
-    addonPanelInRight: false
-  })
-);
+addParameters({
+  options: {
+    theme: create({
+      base: 'light',
+      brandTitle: '<%= props.name %>',
+      brandUrl: '<%= props.url %>',
+      colorPrimary: '<%= props.brandColor %>',
+      colorSecondary: '<%= props.brandColor %>'
+    }),
+    panelPosition: 'bottom'
+  }
+});
 
 configure(loadStories, module);

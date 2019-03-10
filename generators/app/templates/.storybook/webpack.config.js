@@ -31,7 +31,7 @@ const NEW_RULES = {
   }
 };
 
-module.exports = (baseConfig, env, config) => {
+module.exports = ({ config }) => {
   const findRule = ext => {
     return config.module.rules.find(rule => {
       return rule.test.toString().includes(ext);
