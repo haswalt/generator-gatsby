@@ -19,15 +19,6 @@ export default class NavLink extends Component {
     prefix: ''
   };
 
-  // Patch deep active state
-  // Temporary patch until  https://github.com/gatsbyjs/gatsby/issues/7208 is fixed
-  isActive = ({ isCurrent, isPartiallyCurrent, href }) => {
-    if (isCurrent || (isPartiallyCurrent && href !== '/')) {
-      return { 'data-active': 'true' };
-    }
-    return null;
-  };
-
   render() {
     const { document, href, label, prefix, onClick, className } = this.props;
     const link = href
@@ -40,8 +31,9 @@ export default class NavLink extends Component {
       <Link
         styleName="link"
         to={link}
+        partiallyActive={link !== '/'}
+        activeClassName="active"
         className={className || ''}
-        getProps={this.isActive}
         onClick={onClick}
       >
         {label}

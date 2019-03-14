@@ -18,7 +18,7 @@
     "@tomorrow/bloom": "^1.0.0",
     "babel-plugin-react-css-modules": "^3.4.2",
     "css-vars-ponyfill": "^1.11.1",
-    "gatsby": "^2.1.0",
+    "gatsby": "^2.1.31",
     "gatsby-image": "^2.0.13",
     "gatsby-plugin-layout": "^1.0.3",
     "gatsby-plugin-manifest": "^2.0.9",

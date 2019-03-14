@@ -1,5 +1,5 @@
 .link {
 }
 
-.link[data-active="true"] {
+.link.active {
 }
