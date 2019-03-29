@@ -33,7 +33,7 @@ export default class Layout extends Component {
       <div styleName="page">
         <Helmet>
           <html lang="en" />
-          <meta name="author" content="builtbytomorrow.com" />
+          <meta name="author" content="tomorrowstudio.co" />
           <meta name="rating" content="general" />
           <link rel="shortcut-icon" href={favicon} />
           <script type="application/ld+json">

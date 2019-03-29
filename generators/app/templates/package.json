@@ -2,7 +2,7 @@
   "name": "<%= props.name %>",
   "description": "<%= props.description %>",
   "version": "0.0.0",
-  "author": "Tomorrow (https://www.builtbytomorrow.com)",
+  "author": "Tomorrow (https://www.tomorrowstudio.co)",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {

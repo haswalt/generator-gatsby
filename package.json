@@ -4,7 +4,7 @@
   "description": "Generate Gatsby-based projects for Tomorrow",
   "author": {
     "name": "Tomorrow",
-    "url": "https://www.builtbytomorrow.com"
+    "url": "https://www.tomorrowstudio.co"
   },
   "license": "MIT",
   "files": [
@@ -13,7 +13,7 @@
   "main": "generators/app/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/builtbytomorrow/generator-gatsby.git"
+    "url": "git+https://github.com/tomorrowstudio/generator-gatsby.git"
   },
   "keywords": [
     "yeoman-generator",
