@@ -1,5 +1,4 @@
-const dotenv = require('dotenv');
-dotenv.load();
+require('dotenv').config();
 
 function resolveLinks({ type, uid, isBroken }) {
   if (isBroken) {
