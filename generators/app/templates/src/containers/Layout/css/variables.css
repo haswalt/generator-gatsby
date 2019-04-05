@@ -9,11 +9,10 @@
 
 :root {
   /* Typography */
-  --font-family-body: ;
-  --font-family-heading: ;
-  --font-family-ui: ;
+  --font-family-default: sans-serif;
 
   /* Colors */
+  --color-primary: var(--color-purple);
 
   /* UI */
   --content-max-width: 90rem;

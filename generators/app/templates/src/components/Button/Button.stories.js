@@ -3,13 +3,13 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Button from './index';
 
-const DESCRIPTION = `Simple UI button with various themes`,
+const DESCRIPTION = `Button with various themes`,
   DEFAULT_PROPS = {
     text: 'Click me',
     href: '',
     theme: 'primary'
   },
-  THEME_VALUES = {
+  THEME_OPTIONS = {
     Primary: 'primary',
     Secondary: 'secondary'
   };
@@ -21,7 +21,7 @@ storiesOf('Button', module)
   .add('Primary', () => (
     <Button
       href={text('Href', DEFAULT_PROPS.href)}
-      theme={select('Theme', THEME_VALUES, DEFAULT_PROPS.theme)}
+      theme={select('Theme', THEME_OPTIONS, DEFAULT_PROPS.theme)}
     >
       {text('Label', DEFAULT_PROPS.text)}
     </Button>
@@ -29,7 +29,7 @@ storiesOf('Button', module)
   .add('Secondary', () => (
     <Button
       href={text('Href', DEFAULT_PROPS.href)}
-      theme={select('Theme', THEME_VALUES, 'secondary')}
+      theme={select('Theme', THEME_OPTIONS, 'secondary')}
     >
       {text('Label', DEFAULT_PROPS.text)}
     </Button>

@@ -4,7 +4,7 @@ import './styles.module.css';
 
 /**
  * Button component
- * Simple UI button with various themes
+ * Button with various themes
  * @property {string} href Target URL to link to
  * @property {string} theme [primary|secondary] Style theme for button
  */
@@ -21,7 +21,7 @@ export default class Button extends Component {
     return (
       <Element
         href={href}
-        theme={theme}
+        data-theme={theme}
         styleName="button"
         className={className || ''}
         {...attrs}
