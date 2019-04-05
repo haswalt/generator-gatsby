@@ -27,7 +27,7 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'prismicRepo',
-        message: 'Prismic repository'
+        message: 'Prismic repository name'
       },
       {
         type: 'input',
