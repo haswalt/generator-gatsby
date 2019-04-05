@@ -25,12 +25,4 @@ storiesOf('Button', module)
     >
       {text('Label', DEFAULT_PROPS.text)}
     </Button>
-  ))
-  .add('Secondary', () => (
-    <Button
-      href={text('Href', DEFAULT_PROPS.href)}
-      theme={select('Theme', THEME_OPTIONS, 'secondary')}
-    >
-      {text('Label', DEFAULT_PROPS.text)}
-    </Button>
   ));
