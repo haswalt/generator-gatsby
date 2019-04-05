@@ -1,5 +1,4 @@
-import { withInfo } from '@storybook/addon-info';
-import { select, text, withKnobs } from '@storybook/addon-knobs';
+import { select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Button from './index';
@@ -16,8 +15,6 @@ const DESCRIPTION = `Simple UI button with various themes`,
   };
 
 storiesOf('Button', module)
-  .addDecorator(withInfo)
-  .addDecorator(withKnobs)
   .addParameters({
     info: DESCRIPTION
   })

@@ -1,5 +1,4 @@
-import { withInfo } from '@storybook/addon-info';
-import { object, text, withKnobs } from '@storybook/addon-knobs';
+import { object, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Input from './index';
@@ -14,8 +13,6 @@ const DESCRIPTION = `Styled and controlled form input`,
   };
 
 storiesOf('Form/Input', module)
-  .addDecorator(withInfo)
-  .addDecorator(withKnobs)
   .addParameters({
     info: DESCRIPTION
   })

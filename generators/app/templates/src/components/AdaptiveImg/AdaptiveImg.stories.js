@@ -1,5 +1,4 @@
-import { withInfo } from '@storybook/addon-info';
-import { object, text, withKnobs } from '@storybook/addon-knobs';
+import { object, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import AdaptiveImg from './index';
@@ -11,8 +10,6 @@ const DESCRIPTION = `Automatically lazy loads and uses src sets if appropriate d
 
 // Define stories for component
 storiesOf('AdaptiveImg', module)
-  .addDecorator(withInfo)
-  .addDecorator(withKnobs)
   .addParameters({
     info: DESCRIPTION
   })

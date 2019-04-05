@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import React, { Component } from 'react';
-import Page from '../../components/Page';
+import Page from '../../containers/Page';
 import './styles.module.css';
 
 export default class {{properCase name}}Page extends Component {

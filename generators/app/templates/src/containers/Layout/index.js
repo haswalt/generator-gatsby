@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import './styles.module.css';
 import favicon from '../../assets/img/favicon.png';
+import './styles.module.css';
 
 const JSON_LD_META = [
   {
@@ -26,6 +26,29 @@ const JSON_LD_META = [
  * Automatically wrapped around all other tempaltes and views by gatsby-plugin-layout
  */
 export default class Layout extends Component {
+  shimCSSVars = () => {
+    const { body } = document,
+      cssVarsSupported =
+        window.CSS && window.CSS.supports && window.CSS.supports('(--a: 0)');
+
+    try {
+      !cssVarsSupported && (body.style.visibility = 'hidden');
+
+      cssVarsPonyfill({
+        watch: true,
+        updateURLs: false,
+        onComplete() {
+          setTimeout(() => (body.style.visibility = 'visible'), 10);
+        }
+      });
+    } catch (e) {
+      // noop
+    }
+  };
+
+  componentDidMount() {
+    this.shimCSSVars();
+  }
   render() {
     const { children } = this.props;
 

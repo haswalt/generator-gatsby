@@ -1,8 +1,7 @@
-@custom-media --tablet (min-width: 42em);
-
 /**
- * Document
+ * Document defaults
  * Root line height reflected to postcss config for rlh units
+ * Responsive root font-size from postcss-responsive-type
  */
 html {
   font-size: responsive 14px 16px;
@@ -20,9 +19,6 @@ body {
   margin: 0;
 }
 
-/**
- * Typography
- */
 h1,
 h2 {
   font: var(--font-heading);
@@ -42,7 +38,7 @@ h2 {
 a {
   text-decoration: none;
   color: inherit;
-  outline: none !important;
+  outline: none;
 }
 
 /* Patch hidden prop in Chrome/IE */

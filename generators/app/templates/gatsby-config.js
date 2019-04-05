@@ -30,7 +30,7 @@ const PLUGIN_OPTS = {
     include_favicon: false
   },
   layout: {
-    component: require.resolve(`./src/components/Layout`)
+    component: require.resolve(`./src/containers/Layout`)
   },
   svgr: {
     icon: false

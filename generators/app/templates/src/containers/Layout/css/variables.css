@@ -1,14 +1,20 @@
 /**
  * Design system
  * Using Bloom as a foundation
- * https://github.com/builtbytomorrow/bloom
+ * https://github.com/tomorrowstudio/bloom
  */
+
+/* Import Bloom */
+@import "@tomorrow/bloom/bloom.css";
+
 :root {
-  /* Bloom overrides */
+  /* Typography */
   --font-family-body: ;
   --font-family-heading: ;
   --font-family-ui: ;
 
-  /* Project variables */
+  /* Colors */
+
+  /* UI */
   --content-max-width: 90rem;
 }

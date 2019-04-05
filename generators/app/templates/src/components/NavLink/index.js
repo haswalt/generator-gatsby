@@ -1,10 +1,9 @@
-import { Link } from 'gatsby';
 import React, { Component } from 'react';
 import './styles.module.css';
+import AdaptiveLink from '../AdaptiveLink';
 
 /**
  * Nav link component that takes href or Prismic document
- * with patched deep active state
  * @property {object} link Linked Prismic document
  * @property {string} href Direct href
  * @property {string} label Text to show for link
@@ -20,7 +19,7 @@ export default class NavLink extends Component {
   };
 
   render() {
-    const { document, href, label, prefix, onClick, className } = this.props;
+    const { document, href, label, prefix, className } = this.props;
     const link = href
       ? href
       : `/${prefix && prefix + '/'}${
@@ -28,16 +27,15 @@ export default class NavLink extends Component {
         }`;
 
     return (
-      <Link
+      <AdaptiveLink
         styleName="link"
-        to={link}
+        href={link}
         partiallyActive={link !== '/'}
         activeClassName="active"
         className={className || ''}
-        onClick={onClick}
       >
         {label}
-      </Link>
+      </AdaptiveLink>
     );
   }
 }

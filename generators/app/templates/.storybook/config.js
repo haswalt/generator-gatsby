@@ -1,26 +1,27 @@
-import { addParameters, configure } from '@storybook/react';
-import '@tomorrow/bloom/bloom.css';
-import '../src/globals/css/variables.css';
-import '../src/globals/css/global.css';
+import { withInfo } from '@storybook/addon-info';
+import { withKnobs } from '@storybook/addon-knobs';
+import { addDecorator, addParameters, configure } from '@storybook/react';
+import { create } from '@storybook/theming';
+import React from 'react';
+import Story from './components/Story';
 
-// Stub Gatsby's globals
+/**
+ * Gatsby patching
+ * Stub globals and navigation
+ */
 global.__PATH_PREFIX__ = '';
 global.___loader = {
   enqueue: () => {},
   hovering: () => {}
 };
-
-// Stub Gatsby's navigation
 window.___navigate = pathname => {
   action('NavigateTo:')(pathname);
 };
 
-// Automatically import all files ending in *.stories.js
-const req = require.context('../src', true, /.stories.js$/);
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
-
+/**
+ * Storybook config
+ * Set global opts and decorators
+ */
 addParameters({
   options: {
     theme: create({
@@ -33,5 +34,16 @@ addParameters({
     panelPosition: 'bottom'
   }
 });
+addDecorator(withInfo);
+addDecorator(withKnobs({ escapeHTML: false }));
+addDecorator(storyFn => <Story>{storyFn()}</Story>);
 
+/**
+ * Load stories
+ * Import all files ending with *.stories.js
+ */
+const req = require.context('../src', true, /.stories.js$/);
+function loadStories() {
+  req.keys().forEach(filename => req(filename));
+}
 configure(loadStories, module);

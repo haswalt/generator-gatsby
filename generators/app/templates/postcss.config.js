@@ -21,6 +21,7 @@ const CONFIG = {
 
 module.exports = {
   plugins: [
+    require('postcss-import'),
     require('postcss-nesting'),
     require('postcss-responsive-type'),
     require('postcss-modular-scale')(CONFIG.modularScale),
