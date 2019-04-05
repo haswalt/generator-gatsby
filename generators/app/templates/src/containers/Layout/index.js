@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import favicon from '../../assets/img/favicon.png';
-import './styles.module.css';
+import './global/index.css';
+import styles from './styles.module.css';
 
 const JSON_LD_META = [
   {
@@ -53,7 +54,7 @@ export default class Layout extends Component {
     const { children } = this.props;
 
     return (
-      <div styleName="page">
+      <div styleName="styles.page">
         <Helmet>
           <html lang="en" />
           <meta name="author" content="tomorrowstudio.co" />
@@ -64,7 +65,7 @@ export default class Layout extends Component {
           </script>
         </Helmet>
 
-        <main styleName="content">{children}</main>
+        <main styleName="styles.content">{children}</main>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../src/containers/Layout/styles.module.css';
+import '../../src/containers/Layout/global/index.css';
 
 /**
  * Story component
