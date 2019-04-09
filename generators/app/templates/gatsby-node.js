@@ -4,10 +4,19 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 const TEMPLATES = './src/templates',
   PAGE_CONFIGS = {
     // example: {
-    //   query: `{}`,
-    //   rootQueryNode: '',
-    //   basePath: '/',
-    //   templateName: ''
+    //   query: `{
+    //     allExample {
+    //       edges {
+    //         node {
+    //           id
+    //           uid
+    //         }
+    //       }
+    //     }
+    //   }`,
+    //   rootQueryNode: 'allExample',
+    //   basePath: '/examples',
+    //   templateName: 'example'
     // }
   };
 
