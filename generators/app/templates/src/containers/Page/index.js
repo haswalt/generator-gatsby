@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Head from '../../components/Head';
 
 /**
  * Standard page container
