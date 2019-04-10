@@ -29,7 +29,7 @@ const PLUGIN_OPTS = {
     include_favicon: false
   },
   layout: {
-    component: require.resolve(`./src/containers/Layout`)
+    component: require.resolve(`./src/containers/App`)
   },
   svgr: {
     icon: false

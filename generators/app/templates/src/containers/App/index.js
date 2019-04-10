@@ -23,11 +23,10 @@ const JSON_LD_META = [
 ];
 
 /**
- * Page template
- * The core page layout that sets up a view
- * Automatically wrapped around all other tempaltes and views by gatsby-plugin-layout
+ * App entrypoint
+ * Setup as global container by gatsby-plugin-layout
  */
-export default class Layout extends Component {
+export default class App extends Component {
   shimCSSVars = () => {
     const { body } = document,
       cssVarsSupported =
