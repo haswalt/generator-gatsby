@@ -60,6 +60,7 @@
     "@storybook/addons": "^5.0.0",
     "@storybook/react": "^5.0.0",
     "babel-loader": "^8.0.0",
+    "babel-plugin-remove-graphql-queries": "^2.6.0",
     "babel-preset-gatsby": "^0.1.0",
     "core-js": "^2.6.0",
     "dotenv": "^7.0.0",

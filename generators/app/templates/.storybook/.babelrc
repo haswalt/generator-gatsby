@@ -7,6 +7,7 @@
         "generateScopedName": "[path]--[local]--[hash:base64:5]",
         "webpackHotModuleReloading": true
       }
-    ]
+    ],
+    "remove-graphql-queries"
   ]
 }
