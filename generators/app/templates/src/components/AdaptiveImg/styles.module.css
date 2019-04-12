@@ -5,3 +5,7 @@
 .staticWrapper {
   object-fit: cover;
 }
+
+.staticWrapper .img {
+  margin: auto;
+}
