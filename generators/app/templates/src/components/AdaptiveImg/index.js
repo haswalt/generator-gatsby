@@ -12,25 +12,25 @@ import './styles.module.css';
 export default class AdaptiveImg extends Component {
   static defaultProps = {
     data: {},
-    src: '',
     alt: ''
   };
 
   render() {
-    const { src, data, className, alt, ...attrs } = this.props,
-      hasImgSet = !!data.localFile && !!data.localFile.childImageSharp,
-      ImgElement = hasImgSet ? Img : 'img';
+    const { data, className, alt, ...attrs } = this.props,
+      hasImgSet = !!data.localFile && !!data.localFile.childImageSharp;
 
-    return (
-      <ImgElement
-        {...(hasImgSet
-          ? { fluid: data.localFile.childImageSharp.fluid }
-          : { src: src || data.url })}
+    return hasImgSet ? (
+      <Img
         styleName="img"
+        fluid={data.localFile.childImageSharp.fluid}
         className={className || ''}
         alt={alt || data.alt || ''}
         {...attrs}
       />
+    ) : (
+      <div styleName="staticWrapper" className={className || ''} {...attrs}>
+        <img styleName="img" src={data.url} alt={alt || data.alt || ''} />
+      </div>
     );
   }
 }

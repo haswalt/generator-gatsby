@@ -13,8 +13,7 @@ storiesOf('AdaptiveImg', module)
   .addParameters({
     info: DESCRIPTION
   })
-  .add('With src', () => <AdaptiveImg src={text('src', DEFAULT_PROPS.image)} />)
-  .add('With data object', () => (
+  .add('Default', () => (
     <AdaptiveImg
       data={object('Image data', {
         url: DEFAULT_PROPS.image
