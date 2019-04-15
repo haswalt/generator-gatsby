@@ -5,11 +5,11 @@ import './styles.module.css';
 
 export default class {{properCase name}}Page extends Component {
   render() {
-    const { data } = this.props.data.{{queryNode}};
+    const { data } = this.props.data.{{name}};
 
     return (
       <Page title={data.title} description={data.description}>
-
+        {/*  */}
       </Page>
     );
   }
@@ -17,7 +17,7 @@ export default class {{properCase name}}Page extends Component {
 
 export const {{properCase name}}Query = graphql`
   query{{#if isTemplate}}($id: String!){{/if}} {
-    {{queryNode}}{{#if isTemplate}}(id: { eq: $id }){{/if}} {
+    {{name}}: {{queryNode}}{{#if isTemplate}}(id: { eq: $id }){{/if}} {
       data {
         title
         description
