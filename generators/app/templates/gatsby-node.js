@@ -17,6 +17,7 @@ const TEMPLATES = './src/templates',
     //   rootQueryNode: 'allExample',
     //   basePath: '/examples',
     //   templateName: 'example'
+    //   // customContext: node => {...}
     // }
   };
 
@@ -37,10 +38,13 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: `${basePath}/${node.uid}`,
         component: path.resolve(`${TEMPLATES}/${templateName}/index.js`),
-        context: {
-          id: node.id,
-          uid: node.uid
-        }
+        context: Object.assign(
+          {
+            id: node.id,
+            uid: node.uid
+          },
+          customContext && customContext(node)
+        )
       });
     });
   }
