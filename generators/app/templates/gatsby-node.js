@@ -33,20 +33,23 @@ exports.createPages = ({ graphql, actions }) => {
     basePath,
     templateName
   }) {
-    const pageData = await graphql(query);
-    pageData.data[rootQueryNode].edges.forEach(({ node }) => {
-      createPage({
-        path: `${basePath}/${node.uid}`,
-        component: path.resolve(`${TEMPLATES}/${templateName}/index.js`),
-        context: Object.assign(
-          {
-            id: node.id,
-            uid: node.uid
-          },
-          customContext && customContext(node)
-        )
+    const { data } = await graphql(query),
+      result = data[rootQueryNode];
+
+    !!result &&
+      result.data[rootQueryNode].edges.forEach(({ node }) => {
+        createPage({
+          path: `${basePath}/${node.uid}`,
+          component: path.resolve(`${TEMPLATES}/${templateName}/index.js`),
+          context: Object.assign(
+            {
+              id: node.id,
+              uid: node.uid
+            },
+            customContext && customContext(node)
+          )
+        });
       });
-    });
   }
 
   Object.keys(PAGE_CONFIGS).forEach(page => generatePages(PAGE_CONFIGS[page]));
