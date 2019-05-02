@@ -28,11 +28,6 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'prismicRepo',
         message: 'Prismic repository name'
-      },
-      {
-        type: 'input',
-        name: 'prismicToken',
-        message: 'Prismic access token'
       }
     ]);
   }
@@ -47,7 +42,7 @@ module.exports = class extends Generator {
         globOptions: {
           dot: true,
           // Ignore NPM special files
-          ignore: [this.templatePath('gitignore'), this.templatePath('env')]
+          ignore: [this.templatePath('gitignore')]
         }
       }
     );
@@ -57,9 +52,6 @@ module.exports = class extends Generator {
       this.templatePath('gitignore'),
       this.destinationPath('.gitignore')
     );
-    this.fs.copyTpl(this.templatePath('env'), this.destinationPath('.env'), {
-      props: this.answers
-    });
   }
 
   install() {

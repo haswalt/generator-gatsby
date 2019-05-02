@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 function resolveLinks({ type, uid, isBroken }) {
   if (isBroken) {
     return null;
