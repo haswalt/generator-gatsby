@@ -37,7 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
       result = data[rootQueryNode];
 
     !!result &&
-      result.data[rootQueryNode].edges.forEach(({ node }) => {
+      result.edges.forEach(({ node }) => {
         createPage({
           path: `${basePath}/${node.uid}`,
           component: path.resolve(`${TEMPLATES}/${templateName}/index.js`),
