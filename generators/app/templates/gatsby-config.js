@@ -1,21 +1,10 @@
-function resolveLinks({ type, uid, isBroken }) {
-  if (isBroken) {
-    return null;
-  }
-
-  switch (type) {
-    case 'home':
-      return `/`;
-    default:
-      return `/${uid}`;
-  }
-}
+const resolveDocument = require('./src/utils/resolver').resolveDocument;
 
 const PLUGIN_OPTS = {
   prismic: {
     repositoryName: '<%= props.prismicRepo %>',
     accessToken: process.env.PRISMIC_TOKEN,
-    linkResolver: () => resolveLinks
+    linkResolver: () => resolveDocument
   },
   manifest: {
     name: '<%= props.name %>',
@@ -28,6 +17,9 @@ const PLUGIN_OPTS = {
   },
   layout: {
     component: require.resolve(`./src/containers/App`)
+  },
+  polyfill: {
+    features: ['']
   },
   svgr: {
     icon: false
@@ -63,6 +55,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-nprogress',
       options: PLUGIN_OPTS.nprogress
+    },
+    {
+      resolve: 'gatsby-plugin-polyfill-io',
+      option: PLUGIN_OPTS.polyfill
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',

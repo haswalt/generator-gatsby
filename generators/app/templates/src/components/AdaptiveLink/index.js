@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React, { Component } from 'react';
+import { resolveDocument } from '../../utils/resolver';
 
 /**
  * AdaptiveLink component
@@ -13,17 +14,15 @@ export default class AdaptiveLink extends Component {
 
   render() {
     const { href, children, className, ...attrs } = this.props,
-      internalHref = /^\/(?!\/)/.test(href);
+      isDocument = typeof href === 'object',
+      internalLink = isDocument || /^\/(?!\/)/.test(href),
+      to = isDocument ? resolveDocument(href) : href;
 
-    let LinkElement = internalHref ? Link : 'a';
-
-    if (!href) {
-      LinkElement = 'span';
-    }
+    let LinkElement = internalLink ? Link : 'a';
 
     return (
       <LinkElement
-        {...(internalHref ? { to: href } : { href: href })}
+        {...(internalLink ? { to } : { href })}
         className={className || ''}
         {...attrs}
       >

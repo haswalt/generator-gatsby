@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import cssVarsPonyfill from 'css-vars-ponyfill';
 import Helmet from 'react-helmet';
 import favicon from '../../assets/img/favicon.png';
-import './global/index.css';
+import './css/index.css';
 import styles from './styles.module.css';
 
 const JSON_LD_META = [

@@ -41,12 +41,15 @@ module.exports = ({ config }) => {
   // Use Gatsby's ES6 entrypoint
   config.resolve.mainFields = ['browser', 'module', 'main'];
 
+  // Transpile Gatsby
   findRule('js').exclude = /node_modules\/(?!(gatsby)\/)/;
 
+  // Setup CSS
   findRule('css').use.push('postcss-loader');
   findRule('css').exclude = /\.module\.css$/;
   config.module.rules.push(NEW_RULES.cssModules);
 
+  // Setup SVGO
   findRule('svg').exclude = /\.svg$/;
   config.module.rules.push(NEW_RULES.svgr);
 
