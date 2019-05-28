@@ -1,0 +1,41 @@
+@custom-media --desktop (min-width: 60em);
+
+.header {
+  width: 100%;
+  /* HACK for collapsed sizing by Headroom */
+  padding-bottom: calc(2rem + 1lh);
+  height: 0;
+}
+
+.header,
+:global(.headroom) {
+  display: subgrid !important;
+  z-index: var(--layer-1);
+}
+
+:global(.headroom--scrolled) .header-inner {
+  /* Scrolled styles, eg: smaller padding */
+}
+
+.header :global(.headroom--pinned) {
+  background: white;
+  box-shadow: var(--elevation-1);
+}
+
+.header-inner {
+  grid-column: 2 / 3;
+}
+
+.hamburger {
+  @media (--desktop) {
+    display: none !important;
+  }
+}
+
+.nav {
+  display: none;
+  @media (--desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
