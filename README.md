@@ -9,7 +9,7 @@ Quickly scaffold your own progressive, lightweight [Gatsby](https://gatsbyjs.org
 Use the site generator to scaffold out an opinionated, optimised Gastby website stack
 
 
-### Features
+### Core Features
 
 - 100/100 Lighthouse scores out of the box
 - Lightweight set of style-agnostic functional base components
@@ -19,15 +19,17 @@ Use the site generator to scaffold out an opinionated, optimised Gastby website 
 - [Storybook](https://storybook.js.org/) 5 preconfigured for Gatsby
 - [Prettier](https://prettier.io) and [Stylelint](https://github.com/stylelint/stylelint) configured out of the box
 - Development build notifications
-- Optional extra features:
-  - Netlify deployment configuration (server push, function proxying, etc)
-  - [MobX](https://mobx.js.org/index.html) state management,
-  - Starter CSS design system (built on [Bloom](https://bloom.tomorrowstudio.co))
-  - Dynamic CSS variables polyfilling
-  - Style-agnostic, React friendly form components
-  - Robust video embed component
 
-> **TODO:** Make Prismic boilerplate an optional feature
+
+#### Optional extra features:
+- Netlify deployment configuration (server push, function proxying, etc)
+- [MobX](https://mobx.js.org/index.html) state management,
+- Starter CSS design system (built on [Bloom](https://bloom.tomorrowstudio.co))
+- Dynamic CSS variables polyfilling
+- Style-agnostic, React friendly form components
+- Robust video embed component
+
+> **TODO:** Make Prismic an optional feature [#6](https://github.com/tomorrowstudio/generator-gatsby/issues/6)
 
 ## Plugin generator
 
