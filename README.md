@@ -17,7 +17,6 @@ Use the site generator to scaffold out an opinionated, optimised Gastby website 
 - Basic React CSS Modules and PostCSS support
 - [Prismic](https://prismic.io) source preconfigured with the new GraphQL API
 - [Storybook](https://storybook.js.org/) 5 preconfigured for Gatsby
--
 - [Prettier](https://prettier.io) and [Stylelint](https://github.com/stylelint/stylelint) configured out of the box
 - Development build notifications
 - Optional extra features:
