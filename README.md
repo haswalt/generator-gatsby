@@ -1,5 +1,7 @@
 # Gatsby Generator
 
+[![npm](https://img.shields.io/npm/v/generator-gatsby)](https://www.npmjs.com/package/generator-gatsby)  ![GitHub](https://img.shields.io/github/license/tomorrowstudio/generator-gatsby)
+
 Quickly generate your own progressive, lightweight [Gatsby](https://gatsbyjs.org) sites and plugins.
 
 ## Site generator
