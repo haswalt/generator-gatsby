@@ -1,4 +1,4 @@
-# Gatsby Generator
+<h1><img src="https://www.gatsbyjs.org/Gatsby-Monogram.svg" height="28" /> Gatsby Generator</h1>
 
 [![npm](https://img.shields.io/npm/v/generator-gatsby)](https://www.npmjs.com/package/generator-gatsby)  ![GitHub](https://img.shields.io/github/license/tomorrowstudio/generator-gatsby)
 
