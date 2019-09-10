@@ -37,7 +37,7 @@ const CONFIG = {
     icon: false
   },
   nprogress: {
-    color: '#111',
+    color: '<%= props.brandColor %>',
     showSpinner: false
   },
   preconnect: {
