@@ -21,7 +21,7 @@ const CONFIG = {
     previews: true,
     omitPrismicScript: true,
     pages: [],
-    sharpKeys: [/image|photo|picture|cover/]
+    sharpKeys: [/image|photo|picture/]
   },
   layout: {
     component: require.resolve(`./src/containers/App`)
