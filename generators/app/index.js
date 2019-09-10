@@ -38,6 +38,11 @@ module.exports = class extends Generator {
         default: '#111'
       },
       {
+        type: 'input',
+        name: 'prismic',
+        message: 'Prismic repository'
+      },
+      {
         type: 'checkbox',
         name: 'features',
         message: 'Extra features',
