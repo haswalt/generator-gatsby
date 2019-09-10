@@ -1,0 +1,8 @@
+# Deps
+node_modules
+
+# Runtime
+/*.js
+!index.js
+.DS_Store
+*.log

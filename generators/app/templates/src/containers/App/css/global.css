@@ -1,0 +1,55 @@
+/**
+ * Document defaults
+ */
+html {
+  font-size: 16px;<% if (props.features.includes('bloom')) { %>
+  color: var(--color-text);<% } %>
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+body {
+  position: relative;<% if (props.features.includes('bloom')) { %>
+  font: var(--font-default);<% } %>
+  margin: 0;
+  min-height: 100vh;
+}
+<% if (props.features.includes('bloom')) { %>
+strong {
+  font-weight: var(--font-weight-bold);
+}
+<% } %>
+h1,
+h2,
+h3 {
+  margin: 0;<% if (props.features.includes('bloom')) { %>
+  font: var(--font-heading);<% } %>
+  font-weight: 700;
+}
+
+/* Make box-sizing inheritable */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Strip default anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+/* Images should be contained by default */
+img {
+  max-width: 100%;
+}
+
+/* Patch hidden prop in Chrome/IE */
+[hidden] {
+  display: none !important;
+}

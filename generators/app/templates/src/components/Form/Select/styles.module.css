@@ -1,0 +1,21 @@
+.select :global(.select__indicator-separator) {
+  display: none;
+}
+
+.select :global(.inputEl) {
+  border: none;
+  padding: 0;
+}
+
+.select :global(.select__control) {
+  border: 1px solid grey;
+  box-shadow: none;
+}
+
+.select :global(.select__value-container) {
+  padding: 0.75em 0.6em 0.6em;
+}
+
+.select :global(.select__option) {
+  font: inherit;
+}

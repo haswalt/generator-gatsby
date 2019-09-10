@@ -1,0 +1,32 @@
+{
+  "name": "generator-gatsby",
+  "version": "1.0.0",
+  "description": "Generate progressive, lightweight Gatsby sites and plugins",
+  "author": {
+    "name": "Tomorrow",
+    "url": "https://www.tomorrowstudio.co"
+  },
+  "license": "MIT",
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomorrowstudio/generator-gatsby.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "gatsby",
+    "gatsby-plugin",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "yeoman-generator": "^4.0.1",
+    "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

@@ -1,0 +1,22 @@
+/**
+ * Design system
+ * Using Bloom as a foundation
+ * https://github.com/tomorrowstudio/bloom
+ */
+
+/* Import Bloom */
+@import "@tomorrow/bloom.css";
+
+:root {
+  /* Typography config */
+  --font-family-default: sans-serif;
+
+  /* Colors */
+  --color-primary: var(--color-black);
+  --color-text: var(--color-black);
+
+  /* Layout */
+  --content-grid: minmax(10vw, 1fr) minmax(0, var(--content-max-width))
+    minmax(10vw, 1fr);
+  --content-max-width: 80rem;
+}

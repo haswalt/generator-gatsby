@@ -1,0 +1,6 @@
+.textarea :global(.inputEl) {
+  width: 100%;
+  max-height: 30rem;
+  resize: none !important;
+  font-weight: 400;
+}

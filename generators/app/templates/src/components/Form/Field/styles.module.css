@@ -1,0 +1,53 @@
+.inputEl {
+  display: block;
+  font: inherit;
+  width: 100%;
+  color: inherit;
+  outline: none;
+  margin: 0;
+  box-shadow: none;
+  &[disabled] {
+    opacity: 0.6;
+  }
+  &::placeholder {
+    opacity: 0.6;
+  }
+}
+
+.label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.status {
+  display: block;
+  margin-top: 1em;
+}
+
+.status {
+  opacity: 0;
+  color: transparent;
+  transition: all 300ms ease;
+  &::before {
+    display: block;
+    height: 0;
+    overflow: visible;
+  }
+}
+
+[required]:valid ~ .status {
+  opacity: 1;
+  color: green;
+  &::before {
+    content: attr(data-valid-message);
+  }
+}
+
+[data-submitted='true'] *:invalid ~ .status {
+  opacity: 1;
+  color: red;
+  &::before {
+    content: attr(data-invalid-message);
+  }
+}
