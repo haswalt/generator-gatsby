@@ -6,7 +6,7 @@ Quickly scaffold your own progressive, lightweight [Gatsby](https://gatsbyjs.org
 
 ## Site generator
 
-Use the site generator to scaffold out an opinionated, optimised Gastby website stack
+Scaffold out an opinionated, optimised Gastby website stack
 
 
 ### Core Features
@@ -29,11 +29,11 @@ Use the site generator to scaffold out an opinionated, optimised Gastby website 
 - Style-agnostic, React friendly form components
 - Robust video embed component
 
-> **TODO:** Make Prismic an optional feature [#6](https://github.com/tomorrowstudio/generator-gatsby/issues/6)
+> **TODO:** Make Prismic an optional feature ([#6](https://github.com/tomorrowstudio/generator-gatsby/issues/6))
 
 ## Plugin generator
 
-Use the plugin generator to scaffold lightweight Gatsby plugins, following best practices from Gatsby recommendations
+Scaffold lightweight Gatsby plugins, following best practices from Gatsby recommendations
 
 ### Features
 
