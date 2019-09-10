@@ -3,7 +3,7 @@ const Generator = require('yeoman-generator');
 const FEATURE_FILES = {
   netlify: ['netlify.toml'],
   bloom: ['src/containers/App/css/variables.css'],
-  state: ['src/stores'],
+  state: ['generators/templates/store'],
   form: ['src/components/Form'],
   video: ['src/components/Video']
 };

@@ -38,7 +38,7 @@ module.exports = plop => {
    * Creates a new component under src/components
    */
   plop.setGenerator('component', {
-    description: 'Scaffold a new component',
+    description: 'Generate a new component',
     prompts: [
       {
         type: 'input',
@@ -88,7 +88,7 @@ module.exports = plop => {
    * Creates a new page under src/pages
    */
   plop.setGenerator('page', {
-    description: 'Scaffold a new page',
+    description: 'Generate a new page',
     prompts: [
       {
         type: 'input',
@@ -126,6 +126,28 @@ module.exports = plop => {
       ];
     }
   });
-
+  <% if (props.features.includes('state')) { %>
+  /**
+   * Store generator
+   * Creates a new store under src/stores
+   */
+  plop.setGenerator('store', {
+    description: 'Generate a new store',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Store name'
+      }
+    ],
+    actions: () => [
+      {
+        type: 'add',
+        path: `${PATHS.store.dest}/{{ properCase name }}/index.js`,
+        templateFile: PATHS.store.template
+      }
+    ]
+  });
+  <% } %>
   plop.setHelper('esc', str => str);
 };
