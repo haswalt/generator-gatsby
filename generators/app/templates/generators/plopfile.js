@@ -6,14 +6,18 @@ const PATHS = {
       stories: './templates/component/component.stories.js'
     },
     dest: '../src/components'
-  },
+  }<% if (props.features.includes('prismic')) { %>,
   page: {
     template: './templates/page/index.js',
     dests: {
       page: '../src/pages',
       template: '../src/templates'
     }
-  }
+  }<% } %><% if (props.features.includes('state')) { %>,
+  state: {
+    template: './templates/store/index.js',
+    dest: '../src/stores'
+  }<% } %>
 };
 
 function transformPropsString(props) {
@@ -82,7 +86,7 @@ module.exports = plop => {
       }
     ]
   });
-
+  <% if (props.features.includes('prismic')) { %>
   /**
    * Page generator
    * Creates a new page under src/pages
@@ -126,7 +130,7 @@ module.exports = plop => {
       ];
     }
   });
-  <% if (props.features.includes('state')) { %>
+  <% } %><% if (props.features.includes('state')) { %>
   /**
    * Store generator
    * Creates a new store under src/stores

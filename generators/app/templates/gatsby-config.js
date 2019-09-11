@@ -10,7 +10,7 @@ const CONFIG = {
     icon: './src/assets/img/icon.png',
     display: 'minimal-ui',
     include_favicon: false
-  },
+  },<% if (props.features.includes('prismic')) { %>
   filesystem: {
     name: 'pages',
     path: `${__dirname}/src/pages`
@@ -22,7 +22,7 @@ const CONFIG = {
     omitPrismicScript: true,
     pages: [],
     sharpKeys: [/image|photo|picture/]
-  },
+  },<% } %>
   layout: {
     component: require.resolve(`./src/containers/App`)
   },
@@ -50,7 +50,7 @@ const CONFIG = {
 
 module.exports = {
   siteMetadata: CONFIG.metadata,
-  plugins: [
+  plugins: [<% if (props.features.includes('prismic')) { %>
     {
       resolve: 'gatsby-source-filesystem',
       options: CONFIG.filesystem
@@ -58,7 +58,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic-graphql',
       options: CONFIG.prismic
-    },
+    },<% } %>
     'gatsby-plugin-preact',
     {
       resolve: 'gatsby-plugin-react-css-modules',
@@ -102,5 +102,16 @@ module.exports = {
       resolve: 'gatsby-plugin-notify',
       options: CONFIG.notify
     }
-  ]
+  ]<% if (props.features.includes('netlify')) { %>,
+  developMiddleware: app => {
+    app.use(
+      '/.netlify/functions/',
+      proxy({
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '/.netlify/functions/': ''
+        }
+      })
+    );
+  }<% } %>
 };

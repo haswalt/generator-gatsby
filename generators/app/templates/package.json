@@ -38,9 +38,9 @@
     "gatsby-plugin-sharp": "^2.0.0",
     "gatsby-plugin-sitemap": "^2.0.0",
     "gatsby-plugin-svgr": "^2.0.0",
-    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.0",
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.0",<% if (props.features.includes('prismic')) { %>
     "gatsby-source-filesystem": "^2.1.19",
-    "gatsby-source-prismic-graphql": "^3.4.0-beta.2",
+    "gatsby-source-prismic-graphql": "^3.4.0-beta.2",<% } %>
     "gatsby-transformer-sharp": "^2.1.0",
     "lodash": "^4.17.15",<% if (props.features.includes('state')) { %>
     "mobx": "^5.13.0",

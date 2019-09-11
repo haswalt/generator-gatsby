@@ -1,6 +1,12 @@
 const Generator = require('yeoman-generator');
 
 const FEATURE_FILES = {
+  prismic: [
+    'gatsby-browser.js',
+    'src/lib',
+    'src/components/RichText',
+    'generators/templates/page'
+  ],
   netlify: ['netlify.toml'],
   bloom: ['src/containers/App/css/variables.css'],
   state: ['generators/templates/store'],
@@ -38,15 +44,15 @@ module.exports = class extends Generator {
         default: '#111'
       },
       {
-        type: 'input',
-        name: 'prismic',
-        message: 'Prismic repository'
-      },
-      {
         type: 'checkbox',
         name: 'features',
         message: 'Extra features',
         choices: [
+          {
+            name: 'Prismic content source',
+            value: 'prismic',
+            checked: true
+          },
           {
             name: 'Netlify configuration',
             value: 'netlify',
@@ -78,14 +84,22 @@ module.exports = class extends Generator {
             checked: false
           }
         ]
+      },
+      {
+        type: 'input',
+        name: 'prismic',
+        message: 'Prismic repository name',
+        when: ({ features }) => features.includes('prismic')
       }
     ]);
   }
 
   writing() {
-    const excludeFolders = this.answers.features
+    const excludeFolders = Object.keys(FEATURE_FILES)
       .map(feature => {
-        return FEATURE_FILES[feature] ? FEATURE_FILES[feature] : [];
+        return !this.answers.features.includes(feature)
+          ? FEATURE_FILES[feature]
+          : [];
       })
       .flat();
 
@@ -98,7 +112,10 @@ module.exports = class extends Generator {
         globOptions: {
           dot: true,
           // Ignore excluded features and NPM special fiels
-          ignore: [this.templatePath('gitignore'), ...excludeFolders]
+          ignore: [
+            this.templatePath('gitignore'),
+            ...excludeFolders.map(folder => this.templatePath(folder))
+          ]
         }
       }
     );

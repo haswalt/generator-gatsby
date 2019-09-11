@@ -15,21 +15,19 @@ Scaffold out an opinionated, optimised Gastby website stack
 - Lightweight set of style-agnostic functional base components
 - Internal generators for pages and components (built on [Plop](https://plopjs.com))
 - Basic React CSS Modules and PostCSS support
-- [Prismic](https://prismic.io) source preconfigured with the new GraphQL API
 - [Storybook](https://storybook.js.org/) 5 preconfigured for Gatsby
 - [Prettier](https://prettier.io) and [Stylelint](https://github.com/stylelint/stylelint) configured out of the box
 - Development build notifications
 
-
 #### Optional extra features:
-- Netlify deployment configuration (server push, function proxying, etc)
-- [MobX](https://mobx.js.org/index.html) state management,
+
+- [Netlify](https://netlify.com) deployment configuration (HTTP/2 push, lamda proxying)
+- [Prismic](https://prismic.io) source boilerplate with new GraphQL API
+- [MobX](https://mobx.js.org/index.html) state management
 - Starter CSS design system (built on [Bloom](https://bloom.tomorrowstudio.co))
 - Dynamic CSS variables polyfilling
 - Style-agnostic, React friendly form components
 - Robust video embed component
-
-> **TODO:** Make Prismic an optional feature ([#6](https://github.com/tomorrowstudio/generator-gatsby/issues/6))
 
 ## Plugin generator
 
