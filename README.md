@@ -19,7 +19,7 @@ Scaffold out an opinionated, optimised Gastby website stack
 - [Prettier](https://prettier.io) and [Stylelint](https://github.com/stylelint/stylelint) configured out of the box
 - Development build notifications
 
-### Optional extra features:
+### Optional extras
 
 - [Netlify](https://netlify.com) deployment configuration (HTTP/2 push, lamda proxying)
 - [Prismic](https://prismic.io) source boilerplate with new GraphQL API
