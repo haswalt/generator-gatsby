@@ -26,8 +26,8 @@ Scaffold out an opinionated, optimised Gastby website stack
 - [MobX](https://mobx.js.org/index.html) state management
 - Starter CSS design system (built on [Bloom](https://bloom.tomorrowstudio.co))
 - Dynamic CSS variables polyfilling
-- Style-agnostic, React friendly form components
-- Robust video embed component
+- Style agnostic, React-friendly form components
+- Robust video, button, and other base components
 
 ## Plugin generator
 

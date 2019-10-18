@@ -11,7 +11,8 @@ const FEATURE_FILES = {
   bloom: ['src/containers/App/css/variables.css'],
   state: ['generators/templates/store'],
   form: ['src/components/Form'],
-  video: ['src/components/Video']
+  video: ['src/components/Video'],
+  button: ['src/components/Button']
 };
 
 module.exports = class extends Generator {
@@ -71,6 +72,11 @@ module.exports = class extends Generator {
           {
             name: 'State management',
             value: 'state',
+            checked: false
+          },
+          {
+            name: 'Button component',
+            value: 'button',
             checked: false
           },
           {

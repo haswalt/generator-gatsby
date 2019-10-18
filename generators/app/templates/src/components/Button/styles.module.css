@@ -1,0 +1,45 @@
+@custom-media --mobile (min-width: 40em);
+
+.button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font: var(--font-ui);
+  border-radius: var(--radius-3);
+  background: red;
+  color: white;
+  padding: 1.1em 1.5em 1em;
+  min-width: 7rem;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  @media (--mobile) {
+    width: auto;
+    display: inline-flex;
+  }
+}
+
+/* Sizes */
+.button[data-size=''] {
+}
+
+/* Themes */
+.button[data-theme=''] {
+}
+
+/* States */
+.button[data-busy='true'] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button[disabled] {
+  pointer-events: none;
+  background: lightGrey !important;
+  color: darkGrey !important;
+}
