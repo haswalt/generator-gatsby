@@ -13,15 +13,10 @@
   display: subgrid;
   grid-template-rows: auto;
   -ms-grid-row: 2;
-  margin-top: 3rem;
 }
 
 .content > * {
   grid-column: 2 / 3;
-  &:first-child {
-    padding-top: 0;
-    margin-top: 0;
-  }
 }
 
 /* Shim grid row auto-placement for IE11 */
