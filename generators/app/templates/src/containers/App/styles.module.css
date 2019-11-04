@@ -11,6 +11,7 @@
 
 .content {
   display: subgrid;
+  grid-template-rows: auto;
   -ms-grid-row: 2;
   margin-top: 3rem;
 }
