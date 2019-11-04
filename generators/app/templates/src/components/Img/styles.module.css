@@ -1,4 +1,5 @@
 .fallbackImg {
+  vertical-align: middle;
   width: 100%;
   &[data-cover='true'] {
     object-fit: cover;
