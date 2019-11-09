@@ -13,18 +13,9 @@
   display: subgrid;
   grid-template-rows: auto;
   -ms-grid-row: 2;
+  -ms-subgrid-rows: 30;
 }
 
 .content > * {
   grid-column: 2 / 3;
-}
-
-/* Shim grid row auto-placement for IE11 */
-@media screen and (-ms-high-contrast: active),
-  screen and (-ms-high-contrast: none) {
-  @for $i from 1 to 30 {
-    .content > *:nth-child($i) {
-      grid-row: $i / span 1;
-    }
-  }
 }

@@ -13,7 +13,6 @@ const CONFIG = {
 module.exports = {
   plugins: [
     require('postcss-import'),
-    require('postcss-for'),
     require('postcss-nesting'),
     require('postcss-custom-media'),
     require('postcss-subgrid')(CONFIG.subgrid),
