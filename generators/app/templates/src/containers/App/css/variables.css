@@ -5,7 +5,7 @@
  */
 
 /* Import Bloom */
-@import "@tomorrow/bloom.css";
+@import "@tomorrow/bloom/bloom.css";
 
 :root {
   /* Typography config */
