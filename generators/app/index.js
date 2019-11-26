@@ -1,3 +1,4 @@
+require('array-flat-polyfill');
 const Generator = require('yeoman-generator');
 
 const FEATURE_FILES = {
