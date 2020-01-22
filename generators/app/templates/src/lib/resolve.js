@@ -11,23 +11,25 @@ function resolveDocument({ type, uid, isBroken }) {
   }
 }
 
+function resolveTypename(typename) {
+  return typename.replace(/PRISMIC_/, '');
+}
+
 function resolveLink(link) {
-  const urlLinktypes = [
-    'PRISMIC__ExternalLink',
-    'PRISMIC__ImageLink',
-    'PRISMIC__FileLink'
-  ];
+  const urlLinktypes = ['_ExternalLink', '_ImageLink', '_FileLink'];
 
   if (!link) {
     return '';
   }
 
-  return urlLinktypes.includes(link.__typename)
+  return link.__typename &&
+    urlLinktypes.includes(resolveTypename(link.__typename))
     ? link.url
     : resolveDocument(link._meta || link);
 }
 
 module.exports = {
+  resolveTypename,
   resolveDocument,
   resolveLink
 };

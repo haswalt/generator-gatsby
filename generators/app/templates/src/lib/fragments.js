@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby';
+import 'array-flat-polyfill';
 
 export const link = graphql`
   fragment Link on PRISMIC__Linkable {
@@ -20,41 +21,8 @@ export const link = graphql`
   }
 `;
 
-export const image = [
-  graphql`
-    fragment ImageLarge on File {
-      childImageSharp {
-        fluid(maxWidth: 2400) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  `,
-  graphql`
-    fragment ImageMedium on File {
-      childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  `,
-  graphql`
-    fragment ImageSmall on File {
-      childImageSharp {
-        fluid(maxWidth: 960) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  `,
-  graphql`
-    fragment ImageThumbnail on File {
-      childImageSharp {
-        fluid(maxWidth: 480) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  `
-];
+
+export function withFragments(PageComponent) {
+  PageComponent.fragments = [link].flat();
+  return PageComponent;
+}

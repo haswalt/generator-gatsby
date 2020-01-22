@@ -4,7 +4,8 @@ import Meta from '../../components/Meta';
 import './styles.module.css';
 
 <% if (props.features.includes('state')) { %>{{#if hasState}}export default observer({{properCase type}});
-{{else}}export default {{/if}}function {{properCase type}}{{#if isTemplate}}Template{{else}}Page{{/if}}({ data: query }){<% } else { %>export default function {{properCase type}}{{#if isTemplate}}Template{{else}}Page{{/if}}({ data: query }){<% } %>
+{{else}}<% } else { %>export default {{/if}}<% } else { %>export default <% } %>withFragments({{properCase type}}{{#if isTemplate}}Template{{else}}Page{{/if}}){{/if}}
+function {{properCase type}}{{#if isTemplate}}Template{{else}}Page{{/if}}({ data: query }){
   const { {{type}}: data } = query.prismic;
 
   return !!data ? (

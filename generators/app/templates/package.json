@@ -18,6 +18,7 @@
   "dependencies": {
     "@svgr/webpack": "^4.1.0",<% if (props.features.includes('bloom')) { %>
     "@tomorrow/bloom": "^0.2.0",<% } %>
+    "array-flat-polyfill": "^1.0.0",
     "babel-plugin-react-css-modules": "^5.2.0",<% if (props.features.includes('cssVariables')) { %>
     "css-vars-ponyfill": "^1.17.0",<% } %>
     "gatsby": "^2.3.0",
@@ -54,6 +55,7 @@
     "react-range": "^1.1.1",
     "react-select": "^3.0.4",<% } %><% if (props.features.includes('video')) { %>
     "react-player": "^1.12.0",<% } %>
+    "react-responsive": "^8.0.0",
     "react-use": "^10.1.0",
     "resolve-relative-url": "^1.0.0"
   },
