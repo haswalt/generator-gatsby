@@ -10,9 +10,8 @@ const NEW_RULES = {
         loader: 'css-loader',
         options: {
           importLoaders: 1,
-          modules: {
-            localIdentName: '[path]--[local]--[hash:base64:5]'
-          }
+          modules: true,
+          localIdentName: '[path]--[local]--[hash:base64:5]'
         }
       },
       `postcss-loader`
