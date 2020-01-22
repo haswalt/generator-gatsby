@@ -1,10 +1,11 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import Meta from '../../components/Meta';
+import { withFragments } from '../../lib/fragments';
 import './styles.module.css';
 
 <% if (props.features.includes('state')) { %>{{#if hasState}}export default observer({{properCase type}});
-{{else}}export default {{/if}}<% } else { %>export default <% } %>withFragments({{properCase type}}{{#if isTemplate}}Template{{else}}Page{{/if}}){{/if}}
+{{else}}export default {{/if}}<% } else { %>export default <% } %>withFragments({{properCase type}}{{#if isTemplate}}Template{{else}}Page{{/if}})
 function {{properCase type}}{{#if isTemplate}}Template{{else}}Page{{/if}}({ data: query }){
   const { {{type}}: data } = query.prismic;
 

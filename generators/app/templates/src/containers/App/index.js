@@ -2,13 +2,11 @@ import React<% if (props.features.includes('cssVariables')) { %>, { useEffect }<
 import Helmet from 'react-helmet';
 import favicon from '../../assets/img/favicon.png';
 import Meta from '../../components/Meta';
-import * as fragments from '../../lib/fragments';
 import './css/index.css';
 import styles from './styles.module.css';
 
 // 'Use' silent deps for linters
 styles; // eslint-disable-line
-fragments; // eslint-disable-line
 <% if (props.features.includes('cssVariables')) { %>
 function customPolyfills() {
   const cssVars = {
@@ -73,6 +71,7 @@ export default function App({ children }) {
       {/* Default page meta */}
       <Meta title="<%= props.name %>" description="<%= props.description %>" />
 
+      {/* The page */}
       <main styleName="styles.content">{children}</main>
     </div>
   );
