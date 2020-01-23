@@ -27,7 +27,6 @@ h2,
 h3 {
   margin: 0;<% if (props.features.includes('bloom')) { %>
   font: var(--font-heading);<% } %>
-  font-weight: 700;
 }
 
 /* Make box-sizing inheritable */
