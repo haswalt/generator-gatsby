@@ -26,7 +26,7 @@ storiesOf('Button', module)
       href={text('URL', '')}
       theme={select('Theme', THEME_OPTIONS, DEFAULT_PROPS.theme)}
       size={select('Size', SIZE_OPTIONS, DEFAULT_PROPS.size)}
-      size={boolean('Busy', DEFAULT_PROPS.busy)}
+      busy={boolean('Busy', DEFAULT_PROPS.busy)}
     >
       {text('Label', DEFAULT_PROPS.text)}
     </Button>
