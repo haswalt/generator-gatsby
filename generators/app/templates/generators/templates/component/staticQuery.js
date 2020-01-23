@@ -15,7 +15,7 @@ export default function {{name}}({ {{#each props}}
 }) {
   return (
     <StaticQuery
-      query={{esc '{'}}{{camelCase name}}Query}
+      query={{esc '{'}}{{camelCase name}}Query.toString()}
       render={({ prismic }) => {
           const { [type]: data } = prismic;
           return (
