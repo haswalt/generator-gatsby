@@ -6,24 +6,24 @@ import './styles.module.css';
 /**
  * Img component
  * Adaptively uses gastby-img if data is available, falls back to static elements
- * @property {object} fluid Sharp img data
+ * @property {object} responsive Sharp img data
  * @property {object} fallback [url,alt] Fallback static image
  * @property {string} alt Alt text for the image
  * @property {boolean} cover Whether cover hacks should be applied to the fallback image
  */
 export default function Img({
-  fluid = {},
+  responsive = {},
   fallback = {},
   alt = '',
   cover = false,
   className,
   ...attrs
 }) {
-  const fluidData = get(fluid, 'childImageSharp.fluid');
+  const responsiveData = get(responsive, 'childImageSharp.fluid');
 
-  return !!fluidData ? (
+  return !!responsiveData ? (
     <GatsbyImg
-      fluid={fluidData}
+      responsive={responsiveData}
       alt={alt || (fallback && fallback.alt)}
       className={className || ''}
       {...attrs}
