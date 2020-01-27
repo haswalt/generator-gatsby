@@ -7,15 +7,10 @@
   align-items: center;
   justify-content: center;
   font: var(--font-ui);
-  border-radius: var(--radius-3);
-  background: red;
-  color: white;
   padding: 1.1em 1.5em 1em;
   min-width: 7rem;
   text-align: center;
   white-space: nowrap;
-  border: none;
-  outline: none;
   cursor: pointer;
   user-select: none;
   @media (--mobile) {

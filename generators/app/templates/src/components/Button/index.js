@@ -1,4 +1,5 @@
 import React from 'react';
+import HTMLButton from '../HTMLButton';
 import Link from '../Link';
 import './styles.module.css';
 
@@ -21,7 +22,7 @@ export default function Button({
   children,
   ...attrs
 }) {
-  const Element = href ? Link : 'button';
+  const Element = href ? Link : HTMLButton;
 
   return (
     <Element
