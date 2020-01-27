@@ -8,10 +8,10 @@
   "scripts": {
     "develop": "concurrently \"npm:develop:site\" \"npm:develop:storybook\"",
     "develop:site": "gatsby develop -H 0.0.0.0 -p 3000",
-    "develop:storybook": "start-storybook -p 3002 --ci --quiet",
+    "develop:storybook": "NODE_ENV=production start-storybook -p 3002 --ci --quiet",
     "build": "npm run build:site && npm run build:storybook",
     "build:site": "gatsby build",
-    "build:storybook": "build-storybook -o ./public/__components --quiet",
+    "build:storybook": "NODE_ENV=production build-storybook -o ./public/__components --quiet",
     "generate": "plop --plopfile ./generators/plopfile.js",
     "clean": "gatsby clean"
   },
