@@ -4,15 +4,15 @@
   position: relative;
   display: grid;
   grid-template-columns: var(--content-grid);
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   overflow: hidden;
   min-height: 100vh;
+  -ms-subgrid-rows: 2;
 }
 
 .content {
   display: subgrid;
   grid-template-rows: auto;
-  -ms-grid-row: 2;
   -ms-subgrid-rows: 30;
 }
 
