@@ -1,0 +1,43 @@
+.modal {
+  display: inline-block;
+  position: relative;
+  outline: none !important;
+  max-width: 30rem;
+  width: 100%;
+  background: white;
+}
+
+:global(.modal-overlay) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  overflow: scroll;
+  z-index: var(--layer-top);
+}
+
+/**
+ * Transitions
+ */
+.modal,
+:global(.modal-overlay) {
+  transition: opacity 300ms var(--easing-standard);
+}
+
+.modal,
+:global(.modal-overlay.open),
+:global(.modal-overlay.open.closing) .modal,
+:global(.modal-overlay.open) .modal {
+  opacity: 1;
+}
+
+:global(.modal-overlay),
+:global(.modal-overlay.open.closing) {
+  opacity: 0;
+}

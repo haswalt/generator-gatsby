@@ -1,0 +1,23 @@
+@custom-media --tablet (min-width: 40em);
+@custom-media --desktop (min-width: 50em);
+
+:root {
+  --section-gutter: 6rem;
+  @media (--tablet) {
+    --section-gutter: 10rem;
+  }
+  @media (--desktop) {
+    --section-gutter: 13rem;
+  }
+}
+
+.section {
+  margin: var(--section-gutter) 0;
+}
+
+.section[data-fullwidth="true"] {
+  display: subgrid !important;
+  & > * {
+    grid-column: 2 / 3;
+  }
+}

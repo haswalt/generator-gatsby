@@ -13,7 +13,9 @@ const FEATURE_FILES = {
   state: ['generators/templates/store'],
   form: ['src/components/Form'],
   video: ['src/components/Video'],
-  button: ['src/components/Button']
+  button: ['src/components/Button'],
+  modal: ['src/components/Modal'],
+  overlay: ['src/components/Overlay']
 };
 
 module.exports = class extends Generator {
@@ -83,6 +85,16 @@ module.exports = class extends Generator {
           {
             name: 'Form components',
             value: 'form',
+            checked: false
+          },
+          {
+            name: 'Overlay component',
+            value: 'overlay',
+            checked: false
+          },
+          {
+            name: 'Modal component',
+            value: 'modal',
             checked: false
           },
           {
