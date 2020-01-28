@@ -23,7 +23,7 @@ export default function Img({
 
   return !!responsiveData ? (
     <GatsbyImg
-      responsive={responsiveData}
+      fluid={responsiveData}
       alt={alt || (fallback && fallback.alt)}
       className={className || ''}
       {...attrs}
