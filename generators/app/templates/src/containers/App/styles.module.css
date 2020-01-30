@@ -5,7 +5,6 @@
   display: grid;
   grid-template-columns: var(--content-grid);
   grid-template-rows: 1fr auto;
-  overflow: hidden;
   min-height: 100vh;
   -ms-subgrid-rows: 2;
 }
@@ -18,4 +17,5 @@
 
 .content > * {
   grid-column: 2 / 3;
+  align-self: start;
 }
