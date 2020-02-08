@@ -1,4 +1,9 @@
-.button {
+/**
+ * Pure CSS Components
+ */
+
+/* Button reset */
+.button-reset {
   border: none;
   width: auto;
   overflow: visible;

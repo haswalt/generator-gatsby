@@ -12,7 +12,7 @@ export default function Modal({
   open = false,
   onClose = () => null,
   children,
-  className,
+  className = '',
   ...attrs
 }) {
   return (
@@ -29,7 +29,7 @@ export default function Modal({
       shouldCloseOnOverlayClick={true}
       closeTimeoutMS={500}
       ariaHideApp={false}
-      className={className || ''}
+      className={className}
       {...attrs}
     >
       {children}

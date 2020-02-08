@@ -9,14 +9,14 @@ import './styles.module.css';
 export default function Section({
   fullWidth = false,
   children,
-  className,
+  className = '',
   ...attrs
 }) {
   return (
     <section
       styleName="section"
       data-fullwidth={fullWidth}
-      className={className || ''}
+      className={className}
       {...attrs}
     >
       {children}

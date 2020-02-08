@@ -8,7 +8,7 @@ import Link from '../Link';
  * Render richtext HTML content from Prismic, with plain text fallbacks
  * @property {any} content
  */
-export default function RichText({ content = [], className, ...props }) {
+export default function RichText({ content = [], className = '', ...props }) {
   const PrismicLink = (type, { data }, content) => {
     const href = data.link_type === 'Web' ? data.url : resolveLink(data);
 

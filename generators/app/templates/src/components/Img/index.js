@@ -16,7 +16,7 @@ export default function Img({
   fallback = {},
   alt = '',
   cover = false,
-  className,
+  className = '',
   ...attrs
 }) {
   const responsiveData = get(responsive, 'childImageSharp.fluid');
@@ -25,11 +25,11 @@ export default function Img({
     <GatsbyImg
       fluid={responsiveData}
       alt={alt || (fallback && fallback.alt)}
-      className={className || ''}
+      className={className}
       {...attrs}
     />
   ) : (
-    <div className={className || ''} {...attrs}>
+    <div className={className} {...attrs}>
       <img
         styleName="fallbackImg"
         data-cover={cover}

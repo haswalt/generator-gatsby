@@ -18,7 +18,7 @@ export default function Link({
   href = '',
   greedyActive = false,
   children,
-  className,
+  className = '',
   ...attrs
 }) {
   const [internal, setInternal] = useState(false),
@@ -38,7 +38,7 @@ export default function Link({
       {...(!!href && hrefProp)}
       {...(internal && { getProps: getActiveState })}
       {...(!internal && { target: '_blank', rel: 'noopener noreferrer' })}
-      className={className || ''}
+      className={className}
       {...attrs}
     >
       {children}

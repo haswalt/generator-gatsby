@@ -14,11 +14,11 @@ export default function Video({
   src = '',
   background = false,
   placeholder = null,
-  className,
+  className = '',
   ...props
 }) {
   return (
-    <div styleName="video" className={className || ''}>
+    <div styleName="video" className={className}>
       <ReactPlayer
         url={src}
         light={placeholder}

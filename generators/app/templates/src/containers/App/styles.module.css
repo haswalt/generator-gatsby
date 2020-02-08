@@ -4,9 +4,9 @@
   position: relative;
   display: grid;
   grid-template-columns: var(--content-grid);
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr auto 1fr;
   min-height: 100vh;
-  -ms-subgrid-rows: 2;
+  -ms-subgrid-rows: 3;
 }
 
 .content {

@@ -12,12 +12,12 @@ function initTextarea(textarea) {
  * A styled and controlled textarea that grows based on input
  * @properties Inherited from <Field>
  */
-export default function Textarea({ className, rows, ...attrs }) {
+export default function Textarea({ className = '', rows, ...attrs }) {
   return (
     <Field
       styleName="textarea"
       InputElement="textarea"
-      className={className || ''}
+      className={className}
       ref={initTextarea}
       rows={rows || 6}
       {...attrs}

@@ -10,7 +10,7 @@ import './styles.module.css';
  */
 export default function {{name}}({ {{#each props}}
   {{this.name}} = {{{this.value}}},{{/each}}
-  className,
+  className = '',
   ...attrs
 }) {
   return (
@@ -19,7 +19,7 @@ export default function {{name}}({ {{#each props}}
       render={({ prismic }) => {
           const { [type]: data } = prismic;
           return (
-            <div className={className || ''} {...attrs}></div>
+            <div className={className} {...attrs}></div>
           );
         }}
     />

@@ -22,7 +22,7 @@ const Field = forwardRef(
       InputElement = 'input',
       required = false,
       validation = null,
-      className,
+      className = '',
       children,
       ...attrs
     },
@@ -31,7 +31,7 @@ const Field = forwardRef(
     const syncedId = randomId();
 
     return (
-      <div className={className || ''}>
+      <div className={className}>
         {!!label && (
           <label className="label" styleName="label" htmlFor={syncedId}>
             {label}

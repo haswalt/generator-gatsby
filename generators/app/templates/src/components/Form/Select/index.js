@@ -9,14 +9,14 @@ import './styles.module.css';
  * @property {array} options Select options
  * @properties Inherited from <Field>
  */
-export default function Select({ options = [], className, ...attrs }) {
+export default function Select({ options = [], className = '', ...attrs }) {
   return (
     <Field
       styleName="select"
       InputElement={ReactSelect}
       options={options}
       classNamePrefix="select"
-      className={className || ''}
+      className={className}
       {...attrs}
     />
   );

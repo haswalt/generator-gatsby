@@ -8,13 +8,13 @@ import './styles.module.css';
  * Range input
  * @properties inherited from <Field>
  */
-export default function Range({ value, onChange, className, ...attrs }) {
+export default function Range({ value, onChange, className = '', ...attrs }) {
   return (
     <Field
       InputElement={ReactRange}
       values={[value]}
       onChange={values => onChange(values[0])}
-      className={className || ''}
+      className={className}
       renderTrack={({ props, children }) => (
         <div styleName="track" {...props}>
           {children}

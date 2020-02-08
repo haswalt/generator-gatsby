@@ -6,6 +6,6 @@ import Field from '../Field';
  * Styled and controlled form input
  * @properties Inherited from <Field>
  */
-export default function Input({ className, ...attrs }) {
-  return <Field InputElement="input" className={className || ''} {...attrs} />;
+export default function Input({ className = '', ...attrs }) {
+  return <Field InputElement="input" className={className} {...attrs} />;
 }

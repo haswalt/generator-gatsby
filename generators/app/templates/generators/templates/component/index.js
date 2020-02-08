@@ -9,11 +9,11 @@ import './styles.module.css';
  */
 export default function {{name}}({ {{#each props}}
   {{this.name}} = {{{this.value}}},{{/each}}
-  className,
+  className = '',
   ...attrs
 }) {
   return (
-    <div className={className || ''} {...attrs}>
+    <div className={className} {...attrs}>
 
     </div>
   );

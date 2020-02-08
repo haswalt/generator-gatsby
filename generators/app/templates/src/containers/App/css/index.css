@@ -1,2 +1,3 @@
 <% if (props.features.includes('bloom')) { %>@import "./variables.css";
 <% } %>@import "./global.css";
+@import "./components.css";

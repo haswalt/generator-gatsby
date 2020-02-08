@@ -10,14 +10,14 @@ import './styles.module.css';
 export default function Hamburger({
   open = false,
   duoLine = false,
-  className,
+  className = '',
   ...attrs
 }) {
   return (
     <div
       styleName="hamburger"
       data-open={open}
-      className={className || ''}
+      className={className}
       {...attrs}
     >
       <span styleName="line line-top"></span>

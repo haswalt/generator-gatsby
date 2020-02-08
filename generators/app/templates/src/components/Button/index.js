@@ -1,5 +1,4 @@
 import React from 'react';
-import HTMLButton from '../HTMLButton';
 import Link from '../Link';
 import './styles.module.css';
 
@@ -18,21 +17,21 @@ export default function Button({
   size = 'default',
   busy = false,
   disabled = false,
-  className,
+  className = '',
   children,
   ...attrs
 }) {
-  const Element = href ? Link : HTMLButton;
+  const Element = href ? Link : 'button';
 
   return (
     <Element
       styleName="button"
+      className={`button-reset ${className}`}
       href={href}
       data-size={size}
       data-theme={theme}
       data-busy={busy}
       disabled={disabled}
-      className={className || ''}
       {...attrs}
     >
       {children}
