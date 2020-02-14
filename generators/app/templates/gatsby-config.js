@@ -1,4 +1,5 @@
-const CONFIG = {
+const <% if (props.features.includes('netlify')) { %>proxy = require('http-proxy-middleware'),
+<% } %> CONFIG = {
   metadata: {
     siteUrl: '<%= props.url %>'
   },
