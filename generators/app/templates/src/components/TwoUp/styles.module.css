@@ -1,0 +1,40 @@
+@custom-media --desktop (min-width: 60em);
+
+.twoUp {
+  display: flex;
+  flex-wrap: wrap;
+  margin: var(--grid-offset-large);
+  &[data-centered="true"] {
+    align-items: center;
+  }
+  &[data-tight="true"] {
+    margin: var(--grid-offset);
+  }
+  &[data-collapse="true"] {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+}
+
+.panel {
+  width: 100%;
+  padding: var(--grid-gap-large);
+  @media (--desktop) {
+    width: 50%;
+  }
+}
+
+.twoUp[data-tight="true"] .panel {
+  padding: var(--grid-gap);
+}
+
+.twoUp[data-collapse="true"] .panel {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (--desktop) {
+  .twoUp[data-orientation="reverse"] {
+    flex-direction: row-reverse;
+  }
+}

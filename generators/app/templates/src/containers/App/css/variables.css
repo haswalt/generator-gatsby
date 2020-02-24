@@ -15,8 +15,13 @@
   --color-primary: var(--color-black);
   --color-text: var(--color-black);
 
-  /* Layout */
-  --content-grid: minmax(10vw, 1fr) minmax(0, var(--content-max-width))
-    minmax(10vw, 1fr);
+  /* Layout — Grids*/
   --content-max-width: 80rem;
+  --page-gutter: 8vw;
+  --page-gutter-offset: -8vw;
+  --content-grid: minmax(var(--page-gutter), 1fr)
+    minmax(0, var(--content-max-width)) minmax(var(--page-gutter), 1fr);
+
+  /* Layout — Constants */
+
 }

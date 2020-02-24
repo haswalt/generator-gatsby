@@ -1,21 +1,21 @@
-@custom-media --desktop (min-width: 40em);
+.page,
+.content {
+  display: grid;
+  grid-template-columns: var(--content-grid);
+  & > * {
+    grid-column: 2 / 3;
+    align-self: start;
+  }
+}
 
 .page {
   position: relative;
-  display: grid;
-  grid-template-columns: var(--content-grid);
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 
 .content {
-  display: subgrid;
-  grid-template-rows: auto;
-  -ms-subgrid-rows: 30;
+  grid-column: 1 / 4;
   -ms-grid-row: 2;
-}
-
-.content > * {
-  grid-column: 2 / 3;
-  align-self: start;
+  -ms-subgrid-rows: 30;
 }

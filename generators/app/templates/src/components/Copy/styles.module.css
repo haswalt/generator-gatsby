@@ -1,0 +1,11 @@
+.copy {
+  color: var(--color-text-secondary);
+  @media (min-width: 35em) {
+    font-size: var(--scale-1);
+  }
+  &[data-centered="true"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
